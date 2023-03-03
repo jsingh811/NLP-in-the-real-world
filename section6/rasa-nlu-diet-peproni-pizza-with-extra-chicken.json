@@ -1,0 +1,56 @@
+{
+  "text": "pepperoni pizza with extra chicken",
+  "intent": {
+    "name": "order_pizza_topping",
+    "confidence": 0.9964129328727722
+  },
+  "entities": [
+  {
+    "entity": "topping",
+    "start": 0,
+    "end": 9,
+    "confidence_entity": 0.5962051153182983,
+    "value": "pepperoni",
+    "extractor": "DIETClassifier"
+  },
+  {
+    "entity": "topping",
+    "start": 27,
+    "end": 34,
+    "confidence_entity": 0.9999369382858276,
+    "value": "chicken",
+    "extractor": "DIETClassifier"
+  }
+  ],
+  "text_tokens": [[0,9], [10,15], [16,20], [21,26], [27,34]],
+  "intent_ranking": [
+  {
+    "name": "order_pizza_topping",
+    "confidence": 0.9964129328727722
+  },
+  {
+    "name": "order_pizza_topping_size",
+    "confidence": 0.0035668727941811085
+  },
+  {
+    "name": "order_pizza",
+    "confidence": 1.3016491720918566e-05
+  },
+  {
+    "name": "disagree",
+    "confidence": 4.272261776350206e-06
+  },
+  {
+    "name": "agree",
+    "confidence": 1.4899682128088898e-06
+  },
+  {
+    "name": "greet",
+    "confidence": 8.034250527089171e-07
+  },
+  {
+    "name": "order_pizza_size",
+    "confidence": 6.209180583027774e-07
+  }
+  ]
+}

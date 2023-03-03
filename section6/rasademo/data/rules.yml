@@ -1,0 +1,23 @@
+version: "3.1"
+
+rules:
+
+- rule: Greet anytime the user says hi
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: User expresses disagreement
+  steps:
+  - action: utter_order_pizza_topping_size
+  - intent: disagree
+  - action: utter_disagree
+
+# - rule: Default
+#   steps:
+# - rule: trigger human handoff with action_unlikely_intent
+#   steps:
+#     - action: action_unlikely_intent
+#     - action: ask_human_handoff
+#     - intent: affirm
+#     - action: trigger_human_handoff

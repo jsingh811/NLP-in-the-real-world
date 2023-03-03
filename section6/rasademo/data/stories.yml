@@ -1,0 +1,77 @@
+version: "3.1"
+
+stories:
+
+- story: pizza ordering with no info
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: order_pizza
+  - action: utter_order_pizza
+  - intent: order_pizza_topping_size
+  - action: utter_order_pizza_topping_size
+  - intent: agree
+  #- action: action_order_pizza
+  - action: utter_order_placed
+
+- story: pizza ordering with size info
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: order_pizza_size
+    entities:
+      - pizzasize: medium
+  - action: utter_order_pizza_topping
+  - intent: order_pizza_topping
+    entities:
+      - topping: chicken
+  - action: utter_order_pizza_topping_size
+  - intent: agree
+  #- action: action_order_pizza
+  - action: utter_order_placed
+
+- story: pizza ordering with topping info 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: order_pizza_topping
+    entities:
+      - topping: mushroom
+  - action: utter_order_pizza_size
+  - intent: order_pizza_size
+    entities:
+      - pizzasize: large
+  - action: utter_order_pizza_topping_size
+  - intent: agree
+  #- action: action_order_pizza
+  - action: utter_order_placed
+
+- story: pizza ordering with topping info 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: order_pizza_topping
+    entities:
+      - topping: [mushroom, chicken]
+  - action: utter_order_pizza_size
+  - intent: order_pizza_size
+    entities:
+      - pizzasize: large
+  - action: utter_order_pizza_topping_size
+  - intent: agree
+  #- action: action_order_pizza
+  - action: utter_order_placed
+
+- story: pizza ordering with all info
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: order_pizza_topping_size
+    entities:
+      - pizzasize: large
+      - topping: mushroom
+      - topping: chicken
+  - action: utter_order_pizza_topping_size
+  - intent: agree
+  #- action: action_order_pizza
+  - action: utter_order_placed

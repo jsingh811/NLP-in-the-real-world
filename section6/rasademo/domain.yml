@@ -1,0 +1,67 @@
+version: "3.1"
+
+intents:
+  - greet
+  - order_pizza
+  - order_pizza_topping_size
+  - order_pizza_topping
+  - order_pizza_size
+  - agree
+  - disagree
+
+responses:
+  utter_greet:
+  - text: "Hey! How can I help you?"
+  - text: "Hello! Which pizza would you like to order?"
+
+  utter_order_pizza:
+  - text: "Can you tell me what toppings you'd like and the size of the pizza?"
+
+  utter_order_pizza_topping:
+  - text: "Can you tell me what toppings you'd like?"
+
+  utter_order_pizza_size:
+  - text: "Can you tell me what pizza size you'd like? We have medium and large."
+
+  utter_order_pizza_topping_size:
+  - text: "Thank you. We are getting ready to place your order for pizza size: {pizzasize} with toppings {topping}. Does the order look correct?"
+
+  utter_disagree:
+  - text: "Sorry that we were unable to help you on chat. Kindly call +1(800)xxx-xxxx and they'll assist you right away."
+
+  utter_order_placed:
+  - text: "Good news, your order has been placed! ! Your {pizzasize} pizza with {topping} will be ready in 30 mins!"
+
+actions:
+  - utter_greet
+  - utter_disagree
+  - action_order_pizza
+  - utter_order_pizza
+  - utter_order_pizza_topping
+  - utter_order_pizza_size
+  - utter_order_pizza_topping_size
+  - utter_order_placed
+
+entities:
+  - topping
+  - pizzasize
+
+
+slots:
+  topping:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: topping
+  pizzasize:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: pizzasize
+policies:
+  - name: RulePolicy
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false

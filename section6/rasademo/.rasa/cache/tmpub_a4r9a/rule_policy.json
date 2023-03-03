@@ -1,0 +1,21 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_greet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"utter_order_pizza_topping_size\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"utter_order_pizza_topping_size\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"disagree\"}}]": "utter_disagree",
+      "[{\"prev_action\": {\"action_name\": \"utter_order_pizza_topping_size\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"disagree\"}}, {\"prev_action\": {\"action_name\": \"utter_disagree\"}, \"user\": {\"intent\": \"disagree\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent restart",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"utter_order_pizza_topping_size\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"disagree\"}}, {\"prev_action\": {\"action_name\": \"utter_disagree\"}, \"user\": {\"intent\": \"disagree\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"utter_order_pizza_topping_size\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"disagree\"}}]",
+      "predicting default action with intent session_start"
+    ]
+  }
+}
