@@ -1,0 +1,91 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: agree
+  examples: |
+    - yes
+    - ya
+    - yea
+    - yeah
+    - I confirm
+    - good
+    - correct
+    - y
+    - ok
+    - okay
+    - great
+    - right
+    - sure
+    - it does
+    - bingo
+    - you got it
+
+- intent: disagree
+  examples: |
+    - no
+    - incorrect
+    - wrong
+    - not
+    - not right
+    - nah
+    - neh
+    - nay
+    - n
+    - customer service
+    - customer agent
+
+- intent: order_pizza_topping_size
+  examples: |
+    - I would like a [medium](pizzasize) crust pizza with [chicken](topping) and [mushroom](topping)
+    - Can I have a [large](pizzasize) [chicken](topping) and [pepperoni](topping) pizza please?
+    - I want to order a [chicken](topping) pizza, make it [large](pizzasize) with lots of [pepperoni](topping)
+    - [large](pizzasize) [chicken](topping) pizza
+    - give me a [medium](pizzasize) [chicken](topping) pizza and some [mushrooms](topping) on top.
+
+- intent: order_pizza_topping
+  examples: |
+    - [chicken](topping) pizza
+    - Can I get a [mushroom](topping) pizza
+    - Please give me a [chicken](topping) and [mushroom](topping) pizza
+    - I want to order a [mushroom](topping) pizza
+    - I would like to place an order for a [chicken](topping) and [pepperoni](topping) pizza. Thanks
+    - I would like pizza with [peproni](topping) and [mushrooms](topping)
+    - with [pepproni](topping)
+    - with [mushroom](topping)
+    - [pepperoni] and [mushroom]
+    - [peproni](topping), [chicken](topping), [mushroom](topping)
+    - [peproni](topping), [chicken](topping), [mushroom](topping)
+    - [chicken](topping) pizza with [peproni](topping) and [mushroom](topping).
+
+- intent: order_pizza_size
+  examples: |
+    - [medium](pizzasize) pizza
+    - Can I get a [large](pizzasize) pizza
+    - [large](pizzasize) pizza
+    - [large](pizzasize) size
+    - [medium](pizzasize) base
+
+- intent: order_pizza
+  examples: |
+    - order a pizza
+    - get a pizza
+    - I would like pizza
+    - Can I have a pizza
+    - pizza please
+    - Give me pizza
