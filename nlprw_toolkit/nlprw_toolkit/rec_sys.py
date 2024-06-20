@@ -73,7 +73,7 @@ def bert_sim(sample_doc, model, document_embeddings, top_n=8):
 
 def choose_model(data):
     """
-    Will I find everything the sample may contain in the corpus? if so, it means you have represenative data.
+    Will I find everything the sample may contain in the corpus? if so, it means you have representative data.
     Choose "sample_likely_represented_in_corpus" as True.
 
     Will I find generic terms/data outside of the corpus? if so, choose 'sample_likely_represented_in_corpus' False
