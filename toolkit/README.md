@@ -1,8 +1,19 @@
+# Contents
+
+1. [Setup](https://github.com/jsingh811/NLP-in-the-real-world/tree/toolkit/toolkit#setup)   
+2. [NLP Tasks](https://github.com/jsingh811/NLP-in-the-real-world/tree/toolkit/toolkit#nlp-tasks)   
+2.1. [Information Extraction / NER](https://github.com/jsingh811/NLP-in-the-real-world/tree/toolkit/toolkit#information-extraction--ner)  
+2.2. [Sentiment Analysis](https://github.com/jsingh811/NLP-in-the-real-world/tree/toolkit/toolkit#sentiment-analysis)  
+3. [Projects](https://github.com/jsingh811/NLP-in-the-real-world/tree/toolkit/toolkit#projects)  
+3.1. [Comments Analysis](https://github.com/jsingh811/NLP-in-the-real-world/tree/toolkit/toolkit#comments-analysis)  
+3.2. [Recommendation System or Content Similarity](https://github.com/jsingh811/NLP-in-the-real-world/tree/toolkit/toolkit#recommendation-system-or-content-similarity)  
+
 # Setup
 
 Clone the project from Github and run the following for setup.
 
-```git clone https://github.com/jsingh811/NLP-in-the-real-world.git
+```
+git clone https://github.com/jsingh811/NLP-in-the-real-world.git
 cd NLP-in-the-real-world/toolkit
 pip install -e .
 python -m spacy download en_core_web_sm
