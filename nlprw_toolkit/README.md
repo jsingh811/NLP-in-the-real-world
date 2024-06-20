@@ -14,7 +14,7 @@ Clone the project from Github and run the following for setup.
 
 ```
 git clone https://github.com/jsingh811/NLP-in-the-real-world.git
-cd NLP-in-the-real-world/toolkit
+cd NLP-in-the-real-world/nlprw_toolkit
 pip install -e .
 python -m spacy download en_core_web_sm
 ```
@@ -26,7 +26,7 @@ python -m spacy download en_core_web_sm
 To run information extraction / named entity recognition (NER),
 
 ```
-import infoextractor
+from nlprw_toolkit import infoextractor
 
 doc = "please write me at fejfow@iejf.com tomorrow about MOM Mission statement by 12.30 pm."
 entities = ['email', 'DATE', 'TIME', 'pizza_topping']
@@ -45,7 +45,7 @@ print(models)
 To run sentiment analysis, choose style as "formal", "informal", or "mixed"; choose typos as either "many_nondict_terms", "some_nondict_terms", or "mostly_clean"; choose source as "social_media", "review_comments", or "articles". Leave them blank if you don't have an appropriate value to assign to these fields.
 
 ```
-import sentiment
+from nlprw_toolkit import sentiment
 
 # example 1
 sentences = ["i love you", "you dislike me or what?", "you hate ice cream", ""]
@@ -88,7 +88,7 @@ Coming soon
 For running analysis of review comments, use review-analysis as below. It will generate sentiment scores, figure, and word cloud figures by sentiment. It will also return classifications found in each comment. You can specify the categories you want the comments to be classified with.
 
 ```
-import review_analyzer
+from nlprw_toolkit import review_analyzer
 
 comments = [
   "My experience at check-in counter was terrible. The staff was kind of rude and didn't want to help out much. No complaints otherwise.",
@@ -118,7 +118,7 @@ If you are likely to find generic terms/data outside of the corpus, choose 'samp
 If corpus is domain specific, select 'corpus_domain_specific' as True, else False.
 
 ```
-import rec_sys
+from nlprw_toolkit import rec_sys
 
 corpus = [
       "Python Machine Learning Tutorial (Data Science) Python Machine Learning Tutorial - Learn how to predict the kind of music people like. Subscribe for more Python tutorials like ...",

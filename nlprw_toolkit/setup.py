@@ -22,7 +22,7 @@ def get_requirements(path=REQUIREMENTS_PATH):
     return requirements
 
 setup(
-   name='nlprw',
+   name='nlprw_toolkit',
    version='0.0.1',
    description='NLP guide and toolkit.',
    long_description=long_description,
@@ -31,6 +31,7 @@ setup(
    url="https://github.com/jsingh811/NLP-in-the-real-world",
    install_requires=get_requirements(),
    python_requires='>=3.6, <4',
+   py_modules=['nlprw_toolkit'],
    classifiers=[
        "Programming Language :: Python :: 3",
        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
